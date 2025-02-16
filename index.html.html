@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>132 KV Grid Kharian</title>
+    <link rel="stylesheet" href="style.css.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>⚡ 132 KV Grid Kharian ⚡</h1>
+        <p id="liveClock"></p>
+        <button id="darkModeToggle">🌙 Dark Mode</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="home">
+            <li><a href="#">🏠 Home</a></li>
+            <li><a href="#">ℹ️ About</a></li>
+            <li><a href="#">📞 Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchBox" placeholder="🔍 Search Feeder..." onkeyup="searchFeeder()">
+    </div>
+
+    <div class="container">
+        <!-- Transformer 1 -->
+        <div class="transformer">
+            <h2>T1 20/26 Transformer</h2>
+            <div class="status on" onclick="toggleStatus(this)">ON</div></div>
+            <div class="penel">
+                <h2>Incoming 1 (20mva)</h2>
+                <div class="status on" onclick="toggleStatus(this)">ON</div></div>
+            <div class="incoming"> <ul>
+                  <h4 >Outgoing</h4>
+                <li onclick="toggleFeeder(this)"><button id="navigateButton">New Cant </button> (IND) 10705<span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)"><button id="dhoria">Old Dhoria </button> (UR) 10707  <span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)"><button id="city">k.city</button> (CD) 10701<span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)"><button id="navigatethq">THQ </button>400/5 <span class="feeder-status on">ON</span></li>
+            </ul></div>
+
+            
+    </div>
+    <div class="line"> <div class="shadow-line"></div> </div>
+    <div class="container">
+        <!-- Transformer 2 -->
+        <div class="transformer">
+            <h2>T2 40/31.5 Transformer</h2>
+            <div class="status off" onclick="toggleStatus(this)">OFF</div> </div>
+            <div class="penel">
+                <h2>Incoming 2 (40mva)</h2>
+                <div class="status on" onclick="toggleStatus(this)">ON</div></div>
+            <div class="incoming">
+            <ul >
+                
+                <li onclick="toggleFeeder(this)">S/Shaheed 400/5 <span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)">ARS 400/5 <span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)">MES 400/5 <span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)">I J Colony 400/5 <span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)">Karyala 400/5 <span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)">Randeer 400/5 <span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)">Main Bazar 400/5 <span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)">Askari Mall 200/5 <span class="feeder-status on">ON</span></li>
+            </ul></div>
+            
+    </div>
+    <div class="line"> <div class="shadow-line"></div> </div>
+    <div class="container">
+        <!-- Transformer 3 -->
+        <div class="transformer">
+            <h2>T3 40/31.5 Transformer</h2>
+            <div class="status on" onclick="toggleStatus(this)">ON</div></div>
+            <div class="penel">
+                <h2>Incoming 3 (40mva)</h2>
+                <div class="status on" onclick="toggleStatus(this)">ON</div></div>
+            <div class="incoming">
+            <ul >
+                
+                <li onclick="toggleFeeder(this)">Malka 400/5 <span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)">N/Wali 400/5 <span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)">C/Command 200/5 <span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)">Dhuni 400/5 <span class="feeder-status on">ON</span></li>
+                <li onclick="toggleFeeder(this)">Jandawala 400/5 <span class="feeder-status on">ON</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="line"> <div class="shadow-line"></div> </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 132 KV Grid Kharian | All Rights Reserved</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

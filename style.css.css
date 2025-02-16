@@ -1,0 +1,318 @@
+/* =============================
+   Global Styles
+============================= */
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #e0a143;
+    --text-color: #333;
+    --light-bg: #f4f4f4;
+    --dark-bg: #222;
+    --white: #fff;
+    --shadow: rgba(0, 0, 0, 0.2);
+    --success: #d10404;
+    --error: #53dd04;
+    --border-radius: 5px;
+    --transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--light-bg);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* =============================
+   Header & Navigation
+============================= */
+.header {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+#liveClock {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#darkModeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    background: var(--dark-bg);
+    color: var(--white);
+    border-radius: var(--border-radius);
+    transition: background var(--transition);
+}
+
+#darkModeToggle:hover {
+    background: var(--primary-color);
+}
+
+.navbar {
+    background: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    padding: 14px 20px;
+}
+
+.navbar ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color var(--transition);
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* =============================
+   Search Bar
+============================= */
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#searchBox {
+    padding: 12px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    transition: border var(--transition);
+}
+
+#searchBox:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* =============================
+   Main Content
+============================= */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.transformer, .incoming {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px var(--shadow);
+    width: 300px;
+    text-align: justify;
+    transition: transform var(--transition), box-shadow var(--transition);
+    margin: 20px;
+}
+
+.transformer {
+    background: rgb(24, 140, 207);
+    color: var(--white);
+}
+
+.incoming {
+    background: var(--white);
+    color: var(--text-color);
+}
+
+.transformer:hover, .incoming:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px var(--shadow);
+}
+.penel{
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px var(--shadow);
+    width: 200px;
+    text-align: justify;
+    transition: transform var(--transition), box-shadow var(--transition);
+    margin: 80px;
+    background: rgb(149, 151, 16);
+    color: var(--white);
+}
+
+.status {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius);
+    transition: opacity var(--transition);
+}
+
+.status.on {
+    background: var(--success);
+    color: var(--white);
+}
+
+.status.off {
+    background: var(--error);
+    color: var(--white);
+}
+
+.status:hover {
+    opacity: 0.8;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: var(--white);
+    padding: 12px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background var(--transition), transform 0.2s;
+}
+
+ul li:hover {
+    background: #ddd;
+    transform: translateY(-2px);
+}
+
+.feeder-status {
+    float: right;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.feeder-status.on {
+    background: var(--success);
+    color: var(--white);
+}
+
+.feeder-status.off {
+    background: var(--error);
+    color: var(--white);
+}
+
+/* =============================
+   Footer
+============================= */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #004080;
+    color: var(--white);
+    font-size: 14px;
+}
+
+/* =============================
+   Dark Mode Styles
+============================= */
+.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--white);
+}
+
+.dark-mode .header, 
+.dark-mode .navbar, 
+.dark-mode footer {
+    background: #111;
+}
+
+.dark-mode .transformer {
+    background: #333;
+    color: var(--white);
+}
+
+.dark-mode .incoming {
+    background: #444;
+    color: var(--white);
+}
+
+.dark-mode ul li {
+    background: #555;
+}
+
+/* =============================
+   Button Styles
+============================= */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--primary-color);
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+button:hover {
+    background: var(--secondary-color);
+}
+
+/* =============================
+   Responsive Styles
+============================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #searchBox {
+        width: 90%;
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.line {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.shadow-line {
+    width: 100%;
+    height: 2px; /* Thickness of the line */
+    background-color: #0056b3; /* Color of the line */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    margin: 20px 0; /* Space above and below the line */
+}
